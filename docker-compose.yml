@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  docker-workspace:
+    build: .
+    volumes:
+      - ../:/home/user
+    command: /bin/bash -c "/bin/bash"
