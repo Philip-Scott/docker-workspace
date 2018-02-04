@@ -15,12 +15,18 @@ info()    { echo "[INFO]    $*" | tee -a "$LOG_FILE" >&2 ; }
 if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
   apt-get update -qq
 
+  info "Adding the elementary repos"
+  apt-get -qq -y install software-properties-common
+  add-apt-repository -y ppa:elementary-os/os-patches
+  add-apt-repository -y ppa:elementary-os/daily
+  apt-get update -qq
+
   info "Installing packages from pkglist..."
   grep -vE "^#" < pkglist | xargs apt-get -qq install -y
 
-  # Uncomment if you want to install npm packages
-  # info "Installing packages from npm-pkglist..."
-  # grep -vE "^#" < npm-pkglist | xargs npm install -g
+  info "Adding the elementary packages"
+  apt-get update && apt-get install -y elementary-os-overlay
+  apt-get -y dist-upgrade
 
   mkdir /home/user
 

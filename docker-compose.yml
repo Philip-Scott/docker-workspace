@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  docker-workspace:
+  docker-workspace-elementary-juno:
     build: .
     volumes:
       - ../:/home/user
