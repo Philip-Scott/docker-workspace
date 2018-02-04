@@ -17,3 +17,12 @@ libgranite-dev
 libjson-glib-dev
 libgee-0.8-dev
 libclutter-gtk-1.0-dev
+
+# deps to build libgtkcanvas
+
+valadoc
+libxml2-dev
+libgirepository1.0-dev
+librsvg2-dev
+appstream-util
+desktop-file-utils
