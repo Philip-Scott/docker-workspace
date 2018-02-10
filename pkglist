@@ -11,18 +11,11 @@ build-essential
 
 # vala & gtk tools
 valac
+cmake
 meson
 libgtk-3-dev
 libgranite-dev
 libjson-glib-dev
 libgee-0.8-dev
-libclutter-gtk-1.0-dev
-
-# deps to build libgtkcanvas
-
-valadoc
-libxml2-dev
-libgirepository1.0-dev
-librsvg2-dev
-appstream-util
-desktop-file-utils
+libwebkit2gtk-4.0-dev
+libgtkspell3-3-dev

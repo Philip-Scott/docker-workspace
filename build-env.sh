@@ -18,7 +18,7 @@ if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
   info "Adding the elementary repos"
   apt-get -qq -y install software-properties-common
   add-apt-repository -y ppa:elementary-os/os-patches
-  add-apt-repository -y ppa:elementary-os/daily
+  add-apt-repository -y ppa:elementary-os/stable
   apt-get update -qq
 
   info "Installing packages from pkglist..."
