@@ -1,6 +1,4 @@
-FROM ubuntu:xenial
-
-RUN apt-get update
+FROM openjdk:8u162-jre-stretch
 
 RUN mkdir build /scripts
 

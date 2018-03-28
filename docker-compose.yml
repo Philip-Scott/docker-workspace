@@ -1,8 +1,9 @@
 version: '2'
 
 services:
-  docker-workspace:
+  hadoop-workspace:
     build: .
     volumes:
       - ../:/home/user
+      - ./hadoop:/opt/hadoop/
     command: /bin/bash -c "/bin/bash"
